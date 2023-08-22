@@ -8,7 +8,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the rest of the application code to the container
-COPY tutorial-web-fe .
+COPY . .
 
 # Build the Angular app
 RUN npm run build
