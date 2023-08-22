@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tutorial-web-fe": {
+    "node-tutorial-fe": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tutorial-web-fe",
+            "outputPath": "dist/node-tutorial-fe",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tutorial-web-fe:build"
+            "browserTarget": "node-tutorial-fe:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tutorial-web-fe:build:production"
+              "browserTarget": "node-tutorial-fe:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tutorial-web-fe:build"
+            "browserTarget": "node-tutorial-fe:build"
           }
         },
         "test": {
@@ -105,15 +105,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tutorial-web-fe:serve"
+            "devServerTarget": "node-tutorial-fe:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tutorial-web-fe:serve:production"
+              "devServerTarget": "node-tutorial-fe:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "tutorial-web-fe"
+  "defaultProject": "node-tutorial-fe"
 }

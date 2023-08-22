@@ -16,8 +16,9 @@ COPY . .
 # Build the Angular app
 RUN npm run build
 
-# Expose port
+FROM nginx:latest
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=0 /dist/node-tutorial-fe /usr/share/nginx/html
 EXPOSE 50002
-
-# Start the Angular app
-CMD ["npm", "start"]
+# Start the nginx server
+CMD ["nginx", "-g", "daemon off;"]
