@@ -11,7 +11,7 @@ RUN npm install
 COPY . .
 
 # Build the Angular app
-RUN npm run build
+RUN npm build
 
 # Start the Angular app
-# CMD ["npm", "start"]
+CMD ["npm", "start"]
