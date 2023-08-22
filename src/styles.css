@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+div {
+  margin: 15px;
+  font-size: 10px;
+}
+
+button {
+  margin: 15px;
+  font-size: 15px;
+}
+
+p {
+  font-size: 20px;
+  color: #3399FF;
+}
