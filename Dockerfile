@@ -20,7 +20,7 @@ FROM nginx:alpine
 COPY --from=build dist/nginx.conf /usr/share/nginx/html
 
 # Expose port 50001 to the outside world
-EXPOSE 50001
+# EXPOSE 50001
 
 # Command to run the nginx server
 CMD ["nginx", "-g", "daemon off;"]
