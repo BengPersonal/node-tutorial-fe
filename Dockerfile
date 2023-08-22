@@ -14,4 +14,4 @@ COPY . .
 RUN npm run build
 
 # Start the Angular app
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
