@@ -17,7 +17,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the built Angular app from the "build" stage to the nginx server
-COPY --from=build dist/nginx.conf /usr/share/nginx/html
+COPY --from=build dist/tutorial-web-fe /usr/share/nginx/html
 
 # Expose port 50001 to the outside world
 # EXPOSE 50001
