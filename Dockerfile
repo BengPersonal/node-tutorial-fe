@@ -1,6 +1,9 @@
 # Use a base image
 FROM node:14.16.0
 
+# Set the working directory inside the container
+WORKDIR /usr/src/app
+
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
 
@@ -11,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the Angular app
-RUN npm build
+RUN npm run build
 
 # Start the Angular app
 CMD ["npm", "start"]
