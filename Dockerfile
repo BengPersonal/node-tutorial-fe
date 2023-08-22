@@ -16,5 +16,8 @@ COPY . .
 # Build the Angular app
 RUN npm run build
 
+# Expose port
+EXPOSE 50002
+
 # Start the Angular app
 CMD ["npm", "start"]
